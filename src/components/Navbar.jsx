@@ -1,3 +1,5 @@
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -8,12 +10,13 @@ const Wrapper = styled.div`
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
+  align-items: baseline;
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
-  align-item: center;
+  align-item: baseline;
 `;
 
 const Language = styled.span`
@@ -28,6 +31,7 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 20px;
   padding: 5px;
+  margin-top: -10px;
 `;
 
 const Input = styled.input`
@@ -61,10 +65,9 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          {/* <SearchContainer>InputIcon<SearchContainer> */}
           <SearchContainer>
             <Input />
-            Icon with inline styles
+            <Search style={{ color: "gray" }} />
           </SearchContainer>
         </Left>
 
@@ -75,7 +78,15 @@ const Navbar = () => {
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>🧺 Icon with badge</MenuItem>
+          <MenuItem>
+            <Badge
+              badgeContent={4}
+              color="secondary"
+              style={{ marginTop: "-5px" }}
+            >
+              <ShoppingCartOutlined />
+            </Badge>
+          </MenuItem>
         </Right>
       </Wrapper>
     </Container>

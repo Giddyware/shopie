@@ -1,3 +1,4 @@
+import { ChevronLeftRounded, ChevronRight } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
@@ -14,7 +15,7 @@ const Arrow = styled.div`
   width: 50px;
   height: 50px;
   background-color: #fff7f7;
-  border-radius: 50%;yra
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +28,10 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+
+  &:hover {
+    background-color: #ac4c4c;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -89,11 +94,11 @@ const Slider = () => {
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        ⬅
+        <ChevronLeftRounded />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
-          <Slide bg={item.bg}>
+          <Slide bg={item.bg} key={item.key}>
             <ImageContainer>
               <Image src={item.img} />
             </ImageContainer>
@@ -106,7 +111,7 @@ const Slider = () => {
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
-        ➡{" "}
+        <ChevronRight />
       </Arrow>
     </Container>
   );
