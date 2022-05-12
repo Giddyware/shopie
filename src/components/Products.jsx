@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { popularProduct } from "../data";
 
 import Product from "./Product";

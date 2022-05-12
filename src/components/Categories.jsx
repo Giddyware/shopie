@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { categories } from "../data";
 import CategoryItem from "./CategoryItem";
 

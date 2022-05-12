@@ -1,6 +1,6 @@
 import { ChevronLeftRounded, ChevronRight } from "@material-ui/icons";
 import { useState } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { sliderItems } from "../data";
 
 const Container = styled.div`

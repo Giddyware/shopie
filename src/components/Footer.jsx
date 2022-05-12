@@ -7,7 +7,7 @@ import {
   Phone,
   MailOutline,
 } from "@material-ui/icons";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Container = styled.div`
   display: flex;
